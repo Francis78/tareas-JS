@@ -4,37 +4,37 @@ const productos = [
         imagenPrincipal: "https://picsum.photos/id/0/200/300",
         imagenFondo:"https://picsum.photos/id/1/200/300",
         nombre: "Computadora portatil",
-        precio: "1500",
+        precio: "US$ 1500",
     },
     {
         imagenPrincipal: "https://picsum.photos/id/1062/200/300",
         imagenFondo:"https://picsum.photos/id/1025/200/300",
         nombre: "Cobija para perro",
-        precio: "1500",
+        precio: "US$ 1500",
     },
     {
         imagenPrincipal: "https://picsum.photos/id/111/200/300",
         imagenFondo:"https://picsum.photos/id/133/200/300",
         nombre: "Automovil",
-        precio: "1500",
+        precio: "US$ 1500",
     },
     {
         imagenPrincipal: "https://picsum.photos/id/250/200/300",
         imagenFondo:"https://picsum.photos/id/319/200/300",
         nombre: "Camara",
-        precio: "1500",
+        precio: "US$ 1500",
     },
     {
         imagenPrincipal: "https://picsum.photos/id/30/200/300",
         imagenFondo:"https://picsum.photos/id/326/200/300",
         nombre: "Taza",
-        precio: "1500",
+        precio: "US$ 1500",
     },
     {
         imagenPrincipal: "https://picsum.photos/id/75/200/300",
         imagenFondo:"https://picsum.photos/id/674/200/300",
         nombre: "Kilo de uva",
-        precio: "1500",
+        precio: "US$ 1500",
     }
 ]
 
@@ -98,11 +98,15 @@ function crearCard(productoInfo) {
     const paragraph = document.createElement("p")
     paragraph.textContent = productoInfo.nombre
 
+    const tagPrice = document.createElement('p')
+    tagPrice.textContent = productoInfo.precio
+
     const button = document.createElement("button")
     button.textContent = "Comprar"
 
     card.appendChild( imagesWrapper )
     card.appendChild( paragraph )
+    card.appendChild( tagPrice )
     card.appendChild( button )
 
     imagesWrapper.appendChild( firstImg )
@@ -144,4 +148,63 @@ boton.textContent = 'Comprar'
 imagenes.appendChild(elementWithSrc, imagen2)
 
 //body.appendChild(elementWithSrc)
+*/
+
+//FUNCIONES Declarada
+/*
+function name(params) {
+    //instrucciones
+   // return valorDeRetorno
+}
+*/
+//Funciones anonimas - no funcionan antes de la ejecucion del programa en su linea
+/*
+const variableQueGuardaLaFuncion = function(parametros) {
+    // return valorDeRetorno
+}
+variableQueGuardaLaFuncion(argumentos)
+*/
+/*
+function suma(num1, num2) {
+    console.log(num1 + num2);
+}
+suma(2, 2)
+
+const resta = function(num1, num2){
+    console.log(num1 - num2)
+}
+resta(10, 5)
+
+//****FUNCION FLECHA (es anonima) Ejemplos:
+
+const funcionFlecha = (parametro1, parametro2) =>{
+    //instrucciones
+    return valorDeRetorno
+}
+
+const funcionFlechaSinParametro = () => valorDeRetorno
+
+const funcionFlechaConUnSoloParametro = parametro =>{
+    //instrucciones
+    return valorDeRetorno
+}
+
+const funcionFlechaConReturnImplicito = parametro => valorDeRetorno
+
+// ***Funciones de orden superior
+//***Son aQuellas Que reciben otras funciones como parametros = callbacks
+//***Devuelvenotra funcion como valor de retorno = cloushers
+
+function saludarUsuario(nombre) { 
+    console.log(`Hola ${nombre}!, buenas noches.`);
+}
+
+function obtenerNombre(callback) {//Funciones de orden superior
+    let nombre = prompt('Ingresa tu nombre')
+    callback(nombre)
+}
+obtenerNombre(saludarUsuario)
+
+//Callbacks
+//Closures
 */
